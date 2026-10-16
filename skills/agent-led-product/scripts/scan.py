@@ -41,7 +41,7 @@ SIG = {
     "agent_skill": r"SKILL\.md|AGENTS\.md",
     "billing": r"stripe|paddle|lemonsqueezy|flutterwave|paystack|braintree",
     "usage_pricing": r"(credit|usage)[_-]?(wallet|ledger|balance|record)|wallet\.balance|metered|usage[_-]?based|price[_-]?per[_-]?(call|action|request|outcome)|x402|debitCredits|chargeCredits|stripe.*usage_record|meter_event",
-    "audit": r"audit[_-]?log|AuditLog|activity[_-]?log|ActivityLog|McpUsageLog|usage[_-]?log",
+    "audit": r"audit[_-]?(log|event|trail)|Audit(Log|Event|Trail)|activity[_-]?log|ActivityLog|McpUsageLog|usage[_-]?log|api/audit/",
     "approval": r"approv(al|e)|pending[_-]?action|requireConfirm|confirm\s*:\s*z\.literal|dryRun|human[_-]?in[_-]?the[_-]?loop|review[_-]?lane",
     "llm": r"openai|anthropic|@google/genai|google\.generativeai|gemini|ollama|litert|langchain|llama",
     "webhook": r"webhook",
