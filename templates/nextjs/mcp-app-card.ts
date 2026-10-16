@@ -49,7 +49,7 @@ const CARD_HTML = /* html */ `<!doctype html><html><head><meta charset="utf-8">
     }
   }
   function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
-  rpc("ui/initialize", { appInfo: { name: "myapp-preview", version: "1.0.0" } });
+  rpc("ui/initialize", { appInfo: { name: "myapp-preview", version: "0.0.1" } });
 </script></body></html>`;
 
 export function registerPreviewCard(server: McpServer, deps: { preview: (id: string) => Promise<{ name: string; imageUrl?: string; summary: string; pendingRef?: string; approveUrl?: string }> }) {

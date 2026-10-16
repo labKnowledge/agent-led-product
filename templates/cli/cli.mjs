@@ -64,7 +64,7 @@ async function main() {
     fs.writeFileSync(CFG, JSON.stringify({ ...readCfg(), token: rest[0] }, null, 2), { mode: 0o600 });
     console.log("✓ Key saved"); return;
   }
-  await rpc("initialize", { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: `${APP}-cli`, version: "1.0.0" } });
+  await rpc("initialize", { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: `${APP}-cli`, version: "0.0.1" } });
   if (cmd === "tools") {
     const { tools } = await rpc("tools/list", {});
     for (const t of tools) console.log(`${t.name.padEnd(24)} ${t.description?.split("\n")[0] ?? ""}`);

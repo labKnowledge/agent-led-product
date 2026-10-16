@@ -1,6 +1,6 @@
 {
   "name": "agent-led-product",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Score any software product for agent readiness (0-10, evidence-based) and convert it into an agent-led product: MCP server, scoped keys, CLI, agent docs, human approvals, per-action pricing and MCP Apps UI cards.",
   "author": {
     "name": "labKnowledge"

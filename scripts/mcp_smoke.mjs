@@ -26,7 +26,7 @@ async function rpc(method, params, withKey = true) {
 const results = [];
 const check = (name, pass, detail = "") => { results.push({ name, pass, detail }); console.log(`${pass ? "✓" : "✗"} ${name}${detail ? `: ${detail}` : ""}`); };
 
-const init = { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: "agent-led-smoke", version: "1.0.0" } };
+const init = { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: "agent-led-smoke", version: "0.0.1" } };
 
 if (key) {
   const anon = await rpc("initialize", init, false);

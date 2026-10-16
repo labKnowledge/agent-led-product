@@ -36,7 +36,7 @@ export async function createMcpServer(ctx: {
   const can = (need: string) => perms.has(need) && (actor.scopes.length === 0 || actor.scopes.includes(need));
 
   const server = new McpServer(
-    { name: "myapp", version: "1.0.0" },
+    { name: "myapp", version: "0.0.1" },
     {
       instructions:
         "MyApp does <one-line domain>. Typical workflow: get_overview → list_items → create_item → publish_item (publishing waits for the owner's approval). " +

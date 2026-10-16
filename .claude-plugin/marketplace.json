@@ -11,7 +11,7 @@
       "name": "agent-led-product",
       "source": "./",
       "description": "Score any software product for agent readiness and convert it into an agent-led product.",
-      "version": "0.0.4",
+      "version": "0.0.5",
       "category": "development"
     }
   ]
