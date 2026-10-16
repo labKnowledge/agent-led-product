@@ -42,7 +42,7 @@ This skill answers those questions about *your* code, then helps you fix the gap
 9. Can its UI render inside the agents people use (MCP Apps / A2UI)?
 10. Does a better model make it stronger, not obsolete?
 
-Every market claim the skill uses is dated and sourced in [`references/evidence.md`](skills/agent-led-product/references/evidence.md). It also lists quotes that circulate online but couldn't be verified, so the skill never repeats them.
+Every market claim the skill uses is dated and sourced in [`references/evidence.md`](references/evidence.md). It also lists quotes that circulate online but couldn't be verified, so the skill never repeats them.
 
 ## Install
 
@@ -57,10 +57,12 @@ npx skills add labKnowledge/agent-led-product
 /plugin install agent-led-product@agent-led-product
 ```
 
+**Update to the latest version:** `npx skills update`
+
 **Manual:**
 ```bash
 git clone https://github.com/labKnowledge/agent-led-product.git
-mkdir -p ~/.claude/skills && cp -r agent-led-product/skills/agent-led-product ~/.claude/skills/
+mkdir -p ~/.claude/skills && cp -r agent-led-product ~/.claude/skills/agent-led-product
 ```
 
 Then open your project in your agent and ask: *"score this project for agent readiness"*.
@@ -68,7 +70,7 @@ Then open your project in your agent and ask: *"score this project for agent rea
 ## What's inside
 
 ```
-skills/agent-led-product/
+agent-led-product/              # the repo root IS the skill folder
 ├── SKILL.md                    # entry point: picks the mode from your request
 ├── references/                 # scorecard, agentify decision matrix, conversion playbook,
 │                               # tool design, pricing models, portfolio criteria, evidence, report templates
@@ -84,9 +86,9 @@ skills/agent-led-product/
 
 Run the tools directly if you like:
 ```bash
-python3 skills/agent-led-product/scripts/scan.py ./my-project --md
-python3 skills/agent-led-product/scripts/scan.py ~/code --portfolio --md
-MY_KEY=... node skills/agent-led-product/scripts/mcp_smoke.mjs https://myapp.com/api/mcp --key-env MY_KEY
+python3 scripts/scan.py ./my-project --md
+python3 scripts/scan.py ~/code --portfolio --md
+MY_KEY=... node scripts/mcp_smoke.mjs https://myapp.com/api/mcp --key-env MY_KEY
 ```
 
 ## Design principles

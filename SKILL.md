@@ -2,7 +2,7 @@
 name: agent-led-product
 description: Analyze, score, and convert any software project into an agent-led product — one AI agents can operate (API/MCP, CLI, agent docs, scoped keys), that charges per action or outcome, gates risky agent actions behind human approval, and shows need-based UI inside the agents people already use (MCP Apps / A2UI). Use when the user asks to "score my app for agents", "is this agent-ready", "agent-readiness audit", "make this agentic", "turn this into an agent-led product", "add MCP to my app", "headless / API-first", "what should be agentic and what shouldn't", "how will users use this through Claude/ChatGPT", "pivot for the agent era", "audit my portfolio / all my apps", "per-action pricing", "MCP Apps / ui:// card", "llms.txt", or "what should I build in 2026". Works on a single repo, a whole folder of projects, or just an idea. Grounded in the 2025-2026 evidence (Salesforce Headless 360, MCP + MCP Apps, Google Generative UI/A2UI, Claude Code/Codex/Copilot CLI, Sequoia "sell the work").
 metadata:
-  version: 1.0.1
+  version: 1.1.0
   origin: "Builder's Field Guide research (Oct 2026)"
   author: labKnowledge
   license: MIT

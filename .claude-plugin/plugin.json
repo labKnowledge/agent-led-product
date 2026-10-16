@@ -1,10 +1,24 @@
 {
   "name": "agent-led-product",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Score any software product for agent readiness (0-10, evidence-based) and convert it into an agent-led product: MCP server, scoped keys, CLI, agent docs, human approvals, per-action pricing and MCP Apps UI cards.",
-  "author": { "name": "labKnowledge" },
+  "author": {
+    "name": "labKnowledge"
+  },
   "homepage": "https://github.com/labKnowledge/agent-led-product",
   "repository": "https://github.com/labKnowledge/agent-led-product",
   "license": "MIT",
-  "keywords": ["mcp", "agents", "agent-readiness", "mcp-apps", "llms-txt", "headless", "audit", "skills"]
+  "keywords": [
+    "mcp",
+    "agents",
+    "agent-readiness",
+    "mcp-apps",
+    "llms-txt",
+    "headless",
+    "audit",
+    "skills"
+  ],
+  "skills": [
+    "./"
+  ]
 }
