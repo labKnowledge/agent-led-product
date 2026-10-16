@@ -1,0 +1,33 @@
+# {{Product}}
+
+> {{One paragraph: who it is for and the finished outcome it delivers. Lead with the outcome, not the features.}}
+
+## Use {{Product}} from an AI agent
+- MCP endpoint: {{https://app.example.com}}/api/mcp (Streamable HTTP)
+- Auth: `Authorization: Bearer <key>`, or a URL-only connector: {{https://app.example.com}}/api/mcp/<key>
+- Get a key: {{https://app.example.com}}/settings/ai (shown once; acts with your permissions)
+- Claude Code: `claude mcp add --transport http {{slug}} {{https://app.example.com}}/api/mcp --header "Authorization: Bearer <key>"`
+- CLI: `npm i -g {{slug}}` then `{{slug}} key <key>` and `{{slug}} tools`
+
+## Typical jobs (say this → tools used)
+- "{{job 1 in user words}}" → {{tool_a}} → {{tool_b}}
+- "{{job 2}}" → {{tool_c}} (waits for owner approval)
+- "{{job 3}}" → {{tool_d}}
+
+## Tools
+- {{tool_a}}: {{one line}}
+- {{tool_b}}: {{one line}}
+- {{tool_c}}: {{one line}} (requires owner approval)
+
+## Rules agents should follow
+- Read {{guide_tool}} before creating {{thing}}.
+- Accept names or ids; on ambiguity, ask the user which one.
+- Actions that publish, send, spend or delete wait for the owner's approval. Tell the user it is pending.
+
+## Pricing
+{{Per outcome / credits per action. Call get_pricing. Failed actions are not charged.}}
+
+## More
+- [API reference]({{url}}/docs/api.md)
+- [Agent skill]({{url}}/downloads/{{slug}}-SKILL.md)
+- [/.well-known/mcp]({{url}}/.well-known/mcp)

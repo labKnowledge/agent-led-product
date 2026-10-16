@@ -1,0 +1,14 @@
+{
+  "name": "agent-led-product",
+  "owner": { "name": "labKnowledge" },
+  "metadata": { "description": "Agent-readiness scoring and agent-led conversion skill." },
+  "plugins": [
+    {
+      "name": "agent-led-product",
+      "source": "./",
+      "description": "Score any software product for agent readiness and convert it into an agent-led product.",
+      "version": "1.0.0",
+      "category": "development"
+    }
+  ]
+}

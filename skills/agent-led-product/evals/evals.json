@@ -1,0 +1,35 @@
+{
+  "skill_name": "agent-led-product",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Score my app at ~/code/my-saas for agent readiness.",
+      "expected_output": "Runs scripts/scan.py on the repo, then reads the evidence files to confirm each of the 10 scorecard questions with file-path citations (e.g. src/server/mcp/server.ts and its tool count). Re-adds the total from per-question values. Writes docs/agent-led/AUDIT.md using the report template. Chat reply gives score, band, top gap (approval queue / per-outcome pricing / ui:// card) and the single next move."
+    },
+    {
+      "id": 2,
+      "prompt": "What parts of my case-management app should be agentic and what should stay human? How would a case manager actually use it from Claude?",
+      "expected_output": "Mode 2. Builds an action map from the inventory and classifies actions into A/B/C/D/E with agentify-decision.md. Regulated (HIPAA) domain, so writes default to B (approval) and clinical sign-off is C. Writes 3-5 user journeys with first-run steps (create key, add connector) and where approval interrupts. Proposes per-action pricing reusing an existing credits wallet if present. Writes docs/agent-led/PLAN.md with the action map table first."
+    },
+    {
+      "id": 3,
+      "prompt": "Turn this Next.js project into an agent-led product.",
+      "expected_output": "Explains the flow in one line (audit, plan, go/no-go, convert). Runs the audit and plan, then implements layers in order (service layer, scoped keys, MCP route, audit log + approvals, llms.txt/.well-known, CLI, credits, ui:// card), adapting templates to the project's stack and running tests/build after each layer. Never exposes an approve tool to the requesting key. Verifies with mcp_smoke.mjs and a fresh-agent task test, and reports the before/after score."
+    },
+    {
+      "id": 4,
+      "prompt": "Audit all my apps in ~/code and tell me where we stand for the agent era.",
+      "expected_output": "Portfolio mode: scan.py --portfolio, separates products from utilities, fans out read-only subagents with the 10 questions, re-adds every total, builds scores.json and runs chart.py. Report has verdict, scoreboard + coverage charts, ranked table, bet mapping, double-down / quick-win / merge / retire buckets per portfolio.md, a shared agent-ready kit for portfolio-wide gaps, and a 0/30/60/90-day plan with targets."
+    },
+    {
+      "id": 5,
+      "prompt": "I want to build an AI wrapper that summarizes PDFs for $5/month. Good idea for 2026?",
+      "expected_output": "Mode 6. Uses evidence.md honestly: thin wrapper, Q10 = 0 (the model or OS ships this for free), consumer $5 subscriptions are weak. Says don't build it as is. Offers pivots tied to the five bets (sell the finished outcome in a vertical, e.g. compliance summaries with human sign-off; or proprietary data), each with dated sources. Never cites the excluded/fabricated quotes."
+    },
+    {
+      "id": 6,
+      "prompt": "Check that my MCP server at https://myapp.com/api/mcp is good for agents.",
+      "expected_output": "Mode 5. Runs scripts/mcp_smoke.mjs with --key-env (never prints the key): 401 without key, initialize, instructions, tools/list, descriptions, snake_case names, schemas, destructive-tool gating, MCP Apps tools. Then proposes a fresh-agent task test on the top jobs and lists tool-design fixes per tool-design.md."
+    }
+  ]
+}
